@@ -1,6 +1,8 @@
 import org.w3c.dom.ls.LSOutput;
 import products.Product;
 import vehicles.*;
+import vehicles.air.Helicopter;
+import vehicles.air.Plane;
 import vehicles.land.Bicycle;
 import vehicles.land.Car;
 import vehicles.water.Kayak;
@@ -53,5 +55,32 @@ public class VehicleStore {
         System.out.println(speedboat1.getFuel());
         System.out.println(speedboat1.getPrice());
         System.out.println(speedboat1.getMaxSpeed());
+
+        Plane plane1 = new Plane(
+                100,
+                5000,
+                new Product("Plane", 500, 1),
+                new Engine(100, 300),);
+
+        vehicles.add(plane1);
+        
+        plane1.startEngine();
+        System.out.println(plane1.getHp());
+        System.out.println(plane1.getTitle());
+        
+        
+        Helicopter helicopter1 = new Helicopter(
+                200,
+                350, 
+                new Product("Buzzard", 6000, 3));
+                
+                vehicles.add(helicopter1);
+                
+                System.out.println(helicopter1.getLandingSpeed());
+                System.out.println(helicopter1.getNumberOfPropellers());
+                        
+
+    
+    
     }
 }
