@@ -37,10 +37,11 @@ public class VehicleStore {
         Kayak kayak1 = new Kayak(
                 200,
                 100,
-                new Product("kay", 100, 5));
+                new Product("kay", 100, 5),
+                "large");
         vehicles.add(kayak1);
 
-        System.out.println(kayak1.gethullType());
+        System.out.println(kayak1.getHullType());
         System.out.println(kayak1.getTitle());
         System.out.println(kayak1.getPrice());
 
@@ -48,7 +49,8 @@ public class VehicleStore {
                 200,
                 300,
                 new Product("Bayliner", 5000, 4),
-                new Motor(200, 150));
+                new Motor(200, 150),
+                "small");
 
         vehicles.add(speedboat1);
         speedboat1.startEngine();
@@ -60,27 +62,28 @@ public class VehicleStore {
                 100,
                 5000,
                 new Product("Plane", 500, 1),
-                new Engine(100, 300),);
+                new Engine(100, 300), 90
+                );
 
         vehicles.add(plane1);
-        
+
         plane1.startEngine();
         System.out.println(plane1.getHp());
         System.out.println(plane1.getTitle());
-        
-        
+
+
         Helicopter helicopter1 = new Helicopter(
                 200,
-                350, 
-                new Product("Buzzard", 6000, 3));
-                
+                350,
+                new Product("Buzzard", 6000, 3), 100);
+
                 vehicles.add(helicopter1);
-                
+
                 System.out.println(helicopter1.getLandingSpeed());
                 System.out.println(helicopter1.getNumberOfPropellers());
-                        
 
-    
-    
+
+
+
     }
 }

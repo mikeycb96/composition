@@ -4,7 +4,7 @@ import vehicles.IVehicle;
 
 public interface IWaterVehicle extends IVehicle {
 
-    String gethullType();
+    String getHullType();
     void setHullType(String hullType);
 
 }

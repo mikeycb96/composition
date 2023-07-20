@@ -6,12 +6,12 @@ import vehicles.Vehicle;
 public class Helicopter extends Vehicle implements IAirVehicle{
 
     private int numberOfPropellers;
-    private IAirVehicle landingSpeed;
+    private int landingSpeed;
 
-    public Helicopter(float weight, int maxSpeed, IProduct baseIProduct, IAirVehicle landingSpeed){
+    public Helicopter(float weight, int maxSpeed, IProduct baseIProduct, int landingSpeed){
         super(weight, maxSpeed, baseIProduct);
         this.numberOfPropellers = 2;
-        this.landingSpeed = landingSpeed;
+        this.landingSpeed = 0;
     }
 
     public int getNumberOfPropellers() {
@@ -27,8 +27,7 @@ public class Helicopter extends Vehicle implements IAirVehicle{
         return this.getLandingSpeed();
     }
 
-    @Override
     public void setLandingSpeed(int landingSpeed) {
-        this.setLandingSpeed(landingSpeed);
+        this.landingSpeed = 0;
     }
 }
